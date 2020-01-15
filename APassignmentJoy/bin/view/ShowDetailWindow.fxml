@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane prefHeight="934.0" prefWidth="945.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ShowDetailController">
+   <center>
+      <VBox prefHeight="647.0" prefWidth="945.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <ImageView fx:id="imageView" fitHeight="493.0" fitWidth="510.0" pickOnBounds="true" preserveRatio="true" />
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <VBox alignment="TOP_CENTER" prefHeight="453.0" prefWidth="445.0" spacing="5.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Property Details" wrappingWidth="110.13678359985352" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="426.0" spacing="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Property ID:       " wrappingWidth="197.609375">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="P_ID" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="174.13671875" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </opaqueInsets>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="426.0" spacing="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type:" wrappingWidth="197.609375">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Type" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="174.13671875" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="426.0" spacing="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Address:" wrappingWidth="197.609375">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Address" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="174.13671875" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="426.0" spacing="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Suburb:" wrappingWidth="197.609375">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="suburb" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="174.13671875" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="426.0" spacing="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Room:" wrappingWidth="197.609375">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="numOfBed" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="174.13671875" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="426.0" spacing="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Status:" wrappingWidth="197.609375">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="status" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="174.13671875" />
+                           </children>
+                        </HBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Description:" wrappingWidth="427.2186918258667">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Text>
+                        <TextFlow fx:id="descriptionTA" prefHeight="141.0" prefWidth="426.0">
+                           <effect>
+                              <Blend />
+                           </effect>
+                        </TextFlow>
+                     </children>
+                     <opaqueInsets>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="275.0" prefWidth="947.0">
+               <children>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <VBox alignment="TOP_CENTER" prefHeight="184.0" prefWidth="170.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Records" wrappingWidth="52.13677978515625" />
+                        <ListView fx:id="recordList" onMouseClicked="#showRecord" prefHeight="266.0" prefWidth="170.0" />
+                     </children>
+                  </VBox>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <VBox alignment="TOP_CENTER" prefHeight="453.0" prefWidth="445.0" spacing="5.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Record Details" wrappingWidth="110.13678359985352" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="426.0" spacing="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Record ID:" wrappingWidth="197.609375">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="R_ID" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="174.13671875" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </opaqueInsets>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="426.0" spacing="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rent Date:" wrappingWidth="197.609375">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Rdate" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="174.13671875" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="426.0" spacing="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Estimate Return Date:" wrappingWidth="197.609375">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="ERdate" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="174.13671875" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="426.0" spacing="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Actual Return Date:" wrappingWidth="197.609375">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="ARdate" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="174.13671875" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="426.0" spacing="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rent Fee:" wrappingWidth="197.609375">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Rfee" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="174.13671875" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="426.0" spacing="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Late Fee:" wrappingWidth="197.609375">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Lfee" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="174.13671875" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </opaqueInsets>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </VBox>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <effect>
+                  <Blend opacity="0.0" />
+               </effect>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="108.0" prefWidth="945.0" spacing="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="bButton" mnemonicParsing="false" text="Book">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="Rbutton" mnemonicParsing="false" text="Return">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="Mbutton" mnemonicParsing="false" text="Maintain">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="FMbutton" mnemonicParsing="false" text="Finish Maintenance">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

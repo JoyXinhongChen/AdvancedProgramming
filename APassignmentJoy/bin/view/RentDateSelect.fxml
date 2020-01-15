@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="269.0" prefWidth="526.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RentDateSelectController">
+   <children>
+      <Button fx:id="okButton" layoutX="225.0" layoutY="207.0" mnemonicParsing="false" onAction="#OK" prefHeight="25.0" prefWidth="75.0" text="OK" />
+      <VBox layoutX="7.0" layoutY="73.0" prefHeight="124.0" prefWidth="512.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="35.0" prefWidth="431.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Customer ID:" textAlignment="CENTER" wrappingWidth="143.92065370082855" />
+                  <TextField fx:id="customerID" prefHeight="27.0" prefWidth="169.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="31.0" prefWidth="431.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Please pick a rent date:" textAlignment="CENTER" wrappingWidth="156.92065370082855" />
+                  <DatePicker fx:id="date" prefHeight="27.0" prefWidth="182.0" promptText="date" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="35.0" prefWidth="431.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Number of days:" textAlignment="CENTER" wrappingWidth="138.92065370082855" />
+                  <TextField fx:id="numOfDays" prefHeight="27.0" prefWidth="164.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>
